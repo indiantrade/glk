@@ -2,164 +2,162 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> GUJRATI TRADER - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Gokul Chhabra – stock market education community. Educational content only.">
+<meta name="theme-color" content="#0B1F3A">
+<title>Gokul Chhabra</title>
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+:root{
+  --navy:#0B1F3A; --navy-2:#13315C; --bg:#F5F7FA; --card:#FFFFFF; --ink:#0F172A; --muted:#51607A; --line:#E1E7EF;
+  --tg:#229ED9; --tg-dark:#1B86B9; --warn-bg:#FFF7ED; --warn-line:#FED7AA; --warn-ink:#9A3412;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-wrap:break-word;-webkit-tap-highlight-color:transparent}
+img{max-width:100%;height:auto}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;text-align:center;padding:calc(40px + env(safe-area-inset-top,0px)) 0 56px}
+.avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.9);background:var(--line)}
+.name{font-size:20px;font-weight:700;margin-top:12px}
+.tag{font-size:14px;color:#B8C7DE}
+h1{font-size:clamp(26px,7vw,40px);line-height:1.2;letter-spacing:-.01em;margin:22px auto 14px;max-width:620px}
+.lead{font-size:16px;color:#D3DEEE;max-width:540px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;background:var(--tg);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:16px 34px;border-radius:14px;margin-top:28px;box-shadow:0 8px 22px rgba(34,158,217,.4);transition:background .2s}
+.btn:hover{background:var(--tg-dark)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.note{font-size:12px;color:#A9BAD3;margin-top:14px}
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+/* Topics */
+section{padding:44px 0 8px}
+h2{font-size:24px;text-align:center;line-height:1.3}
+.section-sub{text-align:center;color:var(--muted);margin:8px auto 24px;max-width:520px;font-size:15px}
+.list{display:grid;gap:12px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 18px 20px;border-left:4px solid var(--tg)}
+.item h3{font-size:17px;margin-bottom:4px}
+.item p{color:var(--muted);font-size:15px}
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+/* FAQ */
+.faq{padding-top:36px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;min-height:52px;padding:14px 18px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"▼";font-size:11px;color:var(--muted);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(180deg)}
+.faq details p{padding:0 18px 16px;color:var(--muted);font-size:15px}
+.disclaimer{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn-ink);border-radius:12px;padding:18px;font-size:14px;margin-top:18px}
+.disclaimer b{display:block;margin-bottom:6px}
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
+/* Footer */
+footer{text-align:center;padding:32px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:13px;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;justify-content:center;margin:8px 0}
+.links button{background:none;border:0;font:inherit;color:var(--muted);text-decoration:underline;cursor:pointer;padding:10px 12px;min-height:44px}
+.meta{font-size:12px;margin-top:6px}
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(11,31,58,.65);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
+.modal.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;max-width:560px;width:100%;max-height:80vh;overflow:auto;padding:24px;position:relative}
+.modal-box h3{margin-bottom:10px;padding-right:40px}
+.modal-box p{color:var(--muted);font-size:14px}
+.modal-close{position:absolute;top:6px;right:8px;width:44px;height:44px;font-size:26px;background:none;border:0;cursor:pointer;color:var(--muted)}
 
-  .feature-item:last-child { border-bottom: none; }
-
-  .icon { margin-right: 12px; font-size: 16px; }
-
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
-
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
-
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
-
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
-
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
-
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .hero{padding-bottom:44px}
+  .lead{font-size:15px}
+  .btn{display:flex;width:100%}
+  h2{font-size:21px}
+  section{padding-top:36px}
+  .modal{align-items:flex-end;padding:0}
+  .modal-box{border-radius:18px 18px 0 0;max-height:85vh;padding:22px 18px calc(22px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
-<div class="card">
-  <img src="https://i.ibb.co/GQYGXHF4/In-Shot-20260927-223648191.jpg" alt=" GUJRATI TRADER" class="profile-img">
+<header class="hero">
+  <div class="wrap">
+    <img class="avatar" src="https://iili.io/npfpSDX.md.jpg" alt="Gokul Chhabra" width="96" height="96">
+    <p class="name">Gokul Chhabra</p>
+    <p class="tag">Stock market education community</p>
 
-  <h1> GUJRATI TRADER</h1>
+    <h1>Learn how the stock market works, with a focus on risk.</h1>
+    <p class="lead">Simple lessons on market basics, chart reading and risk management, shared on our Telegram channel for learning purposes.</p>
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
+    <a class="btn" href="https://t.me/+-VrsSbPb6uFlZjll" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 3.6 2.8 10.9c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.2-15.2c.3-1.3-.5-1.9-1.5-1.8ZM8.5 13.2l10.1-6.4c.5-.3.9-.1.5.2L10.8 14l-.3 3.5-2-4.3Z"/></svg>
+      Join Telegram Channel
+    </a>
+    <p class="note">Educational content only. No tips. No guaranteed returns.</p>
   </div>
+</header>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
-
-  <a href="https://t.me/+mc6hSYTJFoU0MmRl" class="telegram-btn">JOIN TELEGRAM</a>
-
-  <p class="hindi-quote">     ,     </p>
-
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
+<section>
+  <div class="wrap">
+    <h2>What you will learn</h2>
+    <p class="section-sub">Learning material to help you understand the market before you take any decision.</p>
+    <div class="list">
+      <div class="item"><h3>Market basics</h3><p>How indices, sectors, company results and key market events work.</p></div>
+      <div class="item"><h3>Chart concepts</h3><p>Price action, support and resistance, and basic chart patterns explained.</p></div>
+      <div class="item"><h3>Risk awareness</h3><p>Why risk management matters and how to think about losses before gains.</p></div>
+    </div>
   </div>
+</section>
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
+<section class="faq">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <p class="section-sub"></p>
+    <details><summary>Is this community free to join?</summary><p>Please check the Telegram channel for current access details and any applicable fees.</p></details>
+    <details><summary>Can beginners join?</summary><p>Yes. The content is meant to help learners understand stock market concepts and risks.</p></details>
+    <details><summary>Is this financial advice?</summary><p>No. Everything shared is for general education and information. It is not personal investment advice or a recommendation to buy or sell any instrument.</p></details>
+    <div class="disclaimer"><b>Important risk disclaimer</b>Stock market investing and trading, including futures and options, involve substantial risk and may not be suitable for everyone. You may lose some or all of your capital. Past performance does not guarantee future results. Educational material cannot remove market risk. Consult a SEBI-registered investment advisor if needed and check applicable laws before taking part in financial-market activities.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Gokul Chhabra. All rights reserved.</p>
+    <div class="links">
+      <button type="button" data-modal="privacy">Privacy Policy</button>
+      <button type="button" data-modal="terms">Terms &amp; Conditions</button>
+      <button type="button" data-modal="disclaimer">Risk Disclaimer</button>
+    </div>
+    <p class="meta">Meta Notice: This site is independent and not affiliated with Facebook, Instagram, or Meta Platforms, Inc.</p>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" id="close" aria-label="Close">×</button>
+    <h3 id="modal-title">Policy</h3>
+    <div id="modal-body"></div>
   </div>
 </div>
-<!-- Meta Pixel Code -->
+
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2552096918611818');
-fbq('track', 'PageView');
+var POLICIES={
+  privacy:["Privacy Policy","<p>This page does not collect personal information. When you tap the Telegram button you are taken to Telegram, which has its own privacy policy. We may use basic analytics to understand traffic to this page.</p>"],
+  terms:["Terms & Conditions","<p>All content is provided for general educational and informational purposes only. By using this page and joining the community you agree to follow applicable local laws and the rules of the Telegram channel.</p>"],
+  disclaimer:["Risk Disclaimer","<p>Stock market investing and trading involve substantial risk and may not be suitable for everyone. You may lose some or all of your invested capital. Past performance does not guarantee future results. Nothing here is financial advice.</p>"]
+};
+var m=document.getElementById("modal");
+document.querySelectorAll("[data-modal]").forEach(function(b){
+  b.addEventListener("click",function(){
+    var p=POLICIES[b.dataset.modal];
+    document.getElementById("modal-title").textContent=p[0];
+    document.getElementById("modal-body").innerHTML=p[1];
+    m.classList.add("open");
+  });
+});
+document.getElementById("close").addEventListener("click",function(){m.classList.remove("open")});
+m.addEventListener("click",function(e){if(e.target===m)m.classList.remove("open")});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")m.classList.remove("open")});
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2552096918611818&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 </body>
+  
 </html>
